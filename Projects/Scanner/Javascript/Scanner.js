@@ -1,3 +1,4 @@
+// 방법 1
 const fs = require('fs');
 const input = (()=>{
   //콘솔에서 입력할시에는 모든 입력 후 Ctrl+D 누르면 사용 가능
@@ -10,3 +11,9 @@ const input = (()=>{
 
 //console.log(input()) 의 결과 : "1 23 456"
 //배열로 바꾸고싶은 경우 : console.log(input().split("")) ["1","23","456"]
+
+
+// 방법 2
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+// input[0], input[1].... line이 input배열에 저장되어있음
